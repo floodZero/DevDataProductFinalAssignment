@@ -1,35 +1,57 @@
 ---
-title: "FinalShinyApp"
+title: "MTCars data correlation between MPG and other variables"
 author: "Gavin Kim"
-date: "2017년 1월 12일"
+date: "2017-1-12"
 output: ioslides_presentation
 ---
+```{r}
+
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+## Executive Summary
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This application is based on Regression Model lecture's final assessment of coursera data scientist course. I just re-worked my Rmd report to interactive shiny web application.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+This report explores correlation between a set of variables and miles per gallon(MPG) from “Mortor Trend”magazine(1973). The question what this report do answer is below.
 
-## Slide with Bullets
+ - Is an automatic or manual transmission better for MPG
+ - Quantify the MPG difference between automatic and manual transmissions
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+## EDA
 
-## Slide with R Output
+You can get the information of correlation between MPG and another variable on "EDA" tab.
 
-```{r cars, echo = TRUE}
-summary(cars)
+```{r fig.width=6, fig.height=4, echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("Figure/EDASample1.png")
+grid.raster(img)
 ```
 
-## Slide with Plot
+## Build a Linear Regression Model
 
-```{r pressure}
-plot(pressure)
+Also, You can build a your own model on "Regression Analysis" tab.
+
+```{r fig.width=6, fig.height=4, echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("Figure/BuildSample1.png")
+grid.raster(img)
 ```
 
+## URLs
+
+This is URL of my app, github and github-page.
+
+Shiny app: 
+https://floodzero.shinyapps.io/FinalShinyApp/
+
+github: 
+https://github.com/floodZero/DevDataProductFinalAssignment
+
+github-page: 
+https://floodZero.github.io/DevDataProductFinalAssignment/FinalShinyApp.html
